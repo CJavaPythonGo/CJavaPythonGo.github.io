@@ -1,0 +1,109 @@
+
+/* flex:弹性盒模型 
+    容器（父元素）：装东西 （元素、标签）
+    若A容器装一个B元素，则A是B的容器，B是A的项目
+    项目（子元素）
+
+    默认情况下：
+    水平方向上为主轴（X轴）
+    竖直方向上为交叉轴（Y轴）
+    水平方向对齐方式：左、中、右
+    竖直方向对齐方式：上、中、下
+
+*/
+
+article{
+    width: 1000px;
+    height: 200px;
+    background-color: aqua;
+    margin: auto; 
+    /* 如何创建flex:border: 
+       当一个标签添加了  display: flex;
+       则当前标签就是容器
+
+       此时，默认情况下：
+       所有子元素在一行显示
+       创建flex后，所有项目尺寸之和将不会超出容器展示
+       每个项目会自动缩小
+
+       项目在容器中的4种方向顺序排列方式
+       flex-direction: column-reverse;
+       flex-direction: column;
+       flex-direction: row;
+       flex-direction: row-reverse;
+
+        flex-direction作用是: 改变主轴方向
+        默认取值：row（按行显示）
+        row-reverse：按行倒序
+        column：主轴按列显示（垂直方向）
+        column-reverse：主轴按列倒序显示（垂直方向）
+
+       项目是否换行：
+       条件；所有项目宽度之和要大于容器宽度
+       flex-wrap：项目是否换行
+       
+       取值：
+       nowrap：不换行（默认值）
+       wrap：换行
+       wrap-reverse：换行的同时进行项目倒序展示
+
+    */
+    /* display: flex;  */
+    flex-wrap: wrap;   
+   
+    /* 主轴对齐方式：justify-content: flex-start;
+       （默认主轴情况下为水平方向上左对齐 ）
+        flex-start:左对齐
+        center: 居中
+        flex-end: 右对齐
+        space-between: 两端对齐（justify-content: space-between;)
+        space-around：分散对齐
+        space-evenly:平均分配
+    */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+    /* 交叉轴对齐方式：align-items: flex-start;
+        flex-start:顶端对齐
+        flex-end:底端对齐
+        center: 居中
+
+        多根轴线、交叉轴对齐方式：align-content: flex-start;
+        如何实现多根轴线（换行）：
+        条件：1、所有项目宽度之和大于容器的宽度
+              2、主轴方向进行换行
+    */
+    align-items: center;
+    
+    
+}
+
+.box1{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(174, 0, 255);
+}
+
+.box2{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(0, 255, 51);
+}
+
+.box3{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(255, 0, 170);
+}
+
+.box4{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(255, 255, 0);
+}
+
+.box5{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(255, 0, 4);
+}

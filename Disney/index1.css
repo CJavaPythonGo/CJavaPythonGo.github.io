@@ -1,0 +1,388 @@
+/*
+    设置页面样式
+
+    每个标签，在页面展示的效果
+    效果：尺寸、位置
+
+
+*/
+
+/*
+    元素选择器的书写格式：
+    标记名{声明块}
+*/
+/*header{
+    color: rgb(226, 43, 43);
+    background-color: aqua;
+    width: 1203px;
+    height:109px;
+}*/
+/*
+    background-color: 显示失败
+*/
+main{
+    width: 1200px;
+    height: 3000px;
+    /* background-color: rgb(118, 20, 255); */
+    /*划分区域---划色块*/
+     
+     /* 如何让一个常规流块级元素在水平方向上居中 
+         块级元素：main, div, 语义化标签 
+         step1:给一个固定宽
+         step2:margin: auto;
+     */
+     margin: auto;
+ }
+ 
+ header{
+     width: 1200px;
+     height: 108px;
+     /* background-color: brown; */
+ }
+ 
+ /* div{
+     width: 1203px;
+     height: 233px;
+     background-color: rgb(42, 165, 126);
+ }
+ 
+ 
+ 与上面的div会产生声明冲突 
+ div{ 
+     width: 1203px;
+     height: 666px;
+     background-color: rgb(165, 149, 42);
+ } */
+ 
+ /* 正确划分如下 */
+ 
+ nav{
+     height: 108px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+ }
+ 
+ /* 
+ 【雪碧图的操作步骤】
+ 1、给定尺寸（雪碧图上的尺寸，不是设计稿上的尺寸）
+ 2、引用图片
+ 3、给定位置
+
+ 注：文本类的元素都是设置宽高无效
+  */
+
+  a:hover{
+    color: red;
+  }
+
+.navIndex > i{
+    /* 行内块 */
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+
+    /* background-image: url(“图片地址); */
+    background-image: url("img/icon.png");
+ }
+
+ .navIndex:hover > i{
+    background-position: -22px 0px;
+
+ }
+
+ /* nav > a > .navShop */
+ .navShop > i{
+    display: inline-block;
+    
+    /* 1、给定尺寸 */
+    width: 22px;
+    height: 20px;
+
+    /* 2、引用图片 */
+    /* background-image: url(“图片地址); */
+    background-image: url("img/icon.png");
+
+    /* 3、给定位置 */
+    background-position: 0px  -19px;
+ }
+
+ .navShop:hover > i{
+    background-position: -22px -19px;
+
+ }
+
+ .navZoo > i{
+    display: inline-block;
+    width: 18px;
+    height: 23px;
+    background-image: url("img/icon.png");
+    background-position: 0px  -41px;
+ }
+
+ .navZoo:hover > i{
+    background-position: -22px -41px;
+
+ }
+
+ .navMovie > i{
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-image: url("img/icon.png");
+    background-position: 0px  -65px;
+ }
+
+ .navMovie:hover > i{
+    background-position: -22px -65px;
+ }
+
+ .navEle > i{
+    display: inline-block;
+    width: 14px;
+    height: 21px;
+    background-image: url("img/icon.png");
+    background-position: 0px  -81px;
+ }
+
+ .navEle:hover > i{
+    background-position: -22px -81px;
+ }
+
+ .navVIP > i{
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+    background-image: url("img/icon.png");
+    background-position: 0px  -102px;
+ }
+
+ .navVIP:hover > i{
+    background-position: -22px -102px;
+ }
+
+
+ .banner{
+    width: 1200px;
+     /* 
+     行盒
+     每一行有多少条线，每条线的功能
+     控制文本和图片在一行中的对齐方式 */
+     vertical-align: bottom;
+ }
+ 
+ .star{
+     width: 1200px;
+     height: 233px;
+     /* background-color: rgb(42, 165, 126); */
+ }
+ 
+ /* 子级选择器的书写方式：父元素 >  子元素。
+ eg: .star>div{
+ 
+ }   */
+ 
+ .star > div > div > img{
+     width: 117px;
+     height: 117px;
+ }
+ 
+ .star > h1{
+     /* 文本内容水平居中（图片） */
+     text-align: center;
+     margin-top: 60px;
+     margin-bottom: 40px;
+ }
+ .star > div{
+     display: flex;
+     justify-content: space-evenly;
+ }
+ 
+ /* 文字在小div块中居中 */
+ .star > div > div{
+     text-align: center;
+ }
+ 
+ 
+ .shop{ 
+     width: 1200px;
+     height: 658px;
+     /* background-color: rgb(165, 149, 42); */
+     margin-top: 63px;
+ } 
+ 
+ .shop > h1{
+     margin-top: 0px;
+     margin-bottom: 44px;
+     text-align: center;
+ }
+ .shop > div{
+     /* 由于高度给少了，导致有间距 */
+     display: flex;
+ }
+ 
+ 
+ .shopLeft{ 
+     width: 600px;
+     height: 590px;
+     /* background-color: rgb(52, 165, 42); */
+ } 
+ 
+ 
+ .shopRight{ 
+     display: flex;
+     flex-wrap: wrap;
+     width: 600px;
+     height: 590px;
+     /* background-color: rgb(165, 42, 99); */
+ 
+     /* border（边框）的缩写方式 */
+     border: 1px solid gray;
+ } 
+ 
+ .shopRight > div{
+     width: 298px;
+     height: 294px; 
+     text-align: center;
+     /* border: 1px solid gray; */
+ }
+
+ .shopRight > .box1{
+    border-right: 1px gray;
+    border-bottom: 1px gray;
+ }
+ 
+ .shopRight > .box4{
+    border-top: 1px gray;
+    border-left: 1px gray;
+ }
+ 
+ .info{ 
+     width: 1200px;
+     height: 850px;
+     /* background-color: rgb(165, 42, 157); */
+     margin-top: 56px;
+ } 
+ 
+ .info > h1{
+     text-align: center;
+     margin-bottom: 44px;
+ 
+ /* margin:可以解决不同浏览器（标签边框边框）兼容性问题 */
+ }
+ 
+ .infoBottom{
+     display: flex;
+ }
+ 
+ .infoBottomLeft{
+     width: 600px;
+     height: 768px;
+     /* background-color: rgb(42, 165, 147); */
+ }
+ 
+ .infoBottomLeft > section{
+     /* width: 600px; */
+     height: 298px;
+     border: 1px solid gray;
+     padding-left: 50px;
+     padding-right: 50px;
+     /* background-color: aquamarine; */
+ }
+ .infoBottomRight{
+     width: 600px;
+     height: 768px;
+     /* background-color: rgb(42, 165, 52); */
+ }
+ 
+ .infoBottomRightTop{
+     display: flex;
+     width: 600px;
+     height: 470px;
+     /* background-color: aqua; */
+ }
+ 
+ .infoBottomRightTop > div{
+      
+     width: 300px;
+     height: 470px;
+     /* background-color: rgb(255, 255, 0); */
+     border: 1px solid gray;
+ }
+ 
+ .infoBottomRightTop > div > section{
+     padding-left: 23px;
+     padding-right: 23px;
+ }
+ 
+ 
+ 
+ .infoBottomRightBottom{
+     display: flex;
+     width: 600px;
+     height: 298px;
+     /* background-color: rgb(251, 0, 255); */
+ }
+ 
+ .infoBottomRightBottom > section{
+     padding-left: 23px;
+     padding-right: 23px;
+    
+ }
+
+ 
+ footer{
+     width: 490px;
+     height: 175px;
+     /* background-color: rgb(42, 165, 153); */
+     margin: auto;
+     margin-top: 88px;
+ }
+ 
+ .footerTop{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     border-bottom: 1px solid gray;
+ }
+ 
+ .footerTop > div{
+     text-align: center;
+ }
+ 
+ 
+ .footerTop > img{
+     height: 46px;
+     border-right: 1px solid gray;
+     padding-right: 26px;
+ 
+ }
+ 
+ .footerBottom > p{
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+ /* 动态伪类选择器 */
+
+ /* 未访问 */
+ .footerBottom > p > a:link{
+    color: rgb(0, 8, 255);
+  }
+
+  /* 已访问 */
+  .footerBottom > p > a:visited{
+    color: gray;
+  }
+ 
+  /* 鼠标悬停 */
+ .footerBottom > p > a:hover{
+    color: red;
+  }
+  
+  /* 点击时 */
+  .footerBottom > p > a:active{
+    color: rgb(255, 0, 195);
+  }
+
+  
